@@ -36,13 +36,17 @@ body{
 }
 .header__label > i{
     cursor: pointer;
+    transition: transform .5s;
 }
 #header__toggle{
     height: 0px;
     width: 0px;
 }
-#header__toggle:checked + .nav>.nav__menu{
+#header__toggle:checked ~ .nav>.nav__menu{
     display: flex;
+}
+#header__toggle:checked ~ .header__label > i{
+  transform: rotate(-90deg);
 }
 .nav{
     flex-basis: 100%;
